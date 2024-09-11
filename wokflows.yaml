@@ -6,7 +6,7 @@ metadata:
   title: Create a New GitHub Repository
   description: Creates a new GitHub Repository 
 spec:
-  owner: jc
+  owner: harness_account_all_users
   type: service
   # these are the steps which are rendered in the frontend with the form input
   parameters:
