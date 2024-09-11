@@ -6,7 +6,7 @@ metadata:
   title: Create a New GitHub Repository
   description: Creates a new GitHub Repository 
 spec:
-  owner: service.owner
+  owner: jc
   type: service
   # these are the steps which are rendered in the frontend with the form input
   parameters:
