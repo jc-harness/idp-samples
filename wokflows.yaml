@@ -6,7 +6,7 @@ metadata:
   title: Create a New GitHub Repository
   description: Creates a new GitHub Repository 
 spec:
-  owner: harness_account_all_users
+  owner: service.owner
   type: service
   # these are the steps which are rendered in the frontend with the form input
   parameters:
@@ -14,6 +14,7 @@ spec:
       required:
         - github_org_name
         - github_repo_name
+        - github_username
       properties:
         github_org_name:
           title: GitHub Organization
@@ -23,6 +24,10 @@ spec:
           title: Repository Location
           type: string
           description: Name the new repository that you want to create 
+        github_username:
+          title: GitHub Username
+          type: string
+          description: Add Your GitHub Username 
         token:
           title: Harness Token
           type: string
@@ -38,6 +43,7 @@ spec:
         inputset:
           github_org: ${{ parameters.github_org_name }}
           github_repo: ${{ parameters.github_repo_name }}
+          github_username: ${{parameters.github_username}}
         apikey: ${{ parameters.token }}
     # The final step is to register our new component in the catalog.
 
